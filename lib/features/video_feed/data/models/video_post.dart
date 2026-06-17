@@ -4,10 +4,9 @@ class VideoPost {
   final String username;
   final String caption;
 
-  VideoPost(
+  const VideoPost(
       {required this.id,
       required this.url,
       required this.username,
-      required this.caption}
-  );
+      required this.caption});
 }
