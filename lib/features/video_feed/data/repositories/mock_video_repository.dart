@@ -2,20 +2,33 @@ import 'package:stream_snap/features/video_feed/data/models/video_post.dart';
 
 class MockVideoRepository {
   Future<List<VideoPost>> fetchFeedVideos() async {
-    await Future.delayed(const Duration(milliseconds: 400));
+    //simulate loading or network lag to test spinner
+    await Future.delayed(const Duration(milliseconds: 800));
 
     return [
-      const VideoPost(
-        id: 'vid_001',
-        url:
-            'https://assets.mixkit.co/videos/preview/mixkit-tree-with-yellow-flowers-42226-large.mp4',
+      VideoPost(
+        id: '1',
+        url: 'assets/videos/tree_with_yellow_flowers.mp4',
         username: 'nature_explorer',
-        caption: 'Blossoms in the wind 🌸 #nature #cinematic'),
-      const VideoPost(
-        id: 'vid_004',
-        url: 'https://assets.mixkit.co/videos/preview/mixkit-womans-feet-splashing-in-a-pool-42319-large.mp4',
-        caption: 'Poolside afternoons are unmatched. ☀️ #summer',
-        username: 'lounge_days',
+        caption: 'Experience this with me! ☀️',
+      ),
+      VideoPost(
+        id: '2',
+        url: 'assets/videos/waves_breaking_in_the_ocean.mp4',
+        username: 'drone_pilot',
+        caption: 'Absolutely mesmerizing and satisfying.',
+      ),
+      VideoPost(
+        id: '3',
+        url: 'assets/videos/forrest_stream_in_sunlight.mp4',
+        username: 'serenity_now',
+        caption: 'Breathe and listen. 😮‍💨👂',
+      ),
+      VideoPost(
+        id: '4',
+        url: 'assets/videos/milkyway_galaxy_in_the_night.mp4',
+        username: 'astro_glance',
+        caption: 'Look up!',
       ),
     ];
   }

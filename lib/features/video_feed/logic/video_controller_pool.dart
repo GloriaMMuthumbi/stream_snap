@@ -10,7 +10,7 @@ class VideoControllerPool {
   Future<void> initializeController(VideoPost video) async {
     if (_pool.containsKey(video.id)) return;
 
-    final controller = VideoPlayerController.networkUrl(Uri.parse(video.url));
+    final controller = VideoPlayerController.asset(video.url);
     _pool[video.id] = controller;
 
     try {

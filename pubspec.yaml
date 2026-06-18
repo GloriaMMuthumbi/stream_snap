@@ -63,6 +63,11 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/videos/forrest_stream_in_sunlight.mp4
+    - assets/videos/milkyway_galaxy_in_the_night.mp4
+    - assets/videos/tree_with_yellow_flowers.mp4
+    - assets/videos/waves_breaking_in_the_ocean.mp4
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
